@@ -15,7 +15,7 @@ class LatinSquare {
 
         // rows
         for (i in square.indices) {
-            if(square[i].isEmpty()) return false
+            if(square[i].isEmpty() || square[i].size != square.size) return false
             for(j in square.indices) {
                 val isNumberExist = possibleNumbers.get(square[i][j])
                 if(isNumberExist != null && !isNumberExist) {
