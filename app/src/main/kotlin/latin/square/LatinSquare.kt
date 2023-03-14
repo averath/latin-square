@@ -7,12 +7,15 @@ class LatinSquare {
     fun isValidLatinSquare(square: Array<IntArray>): Boolean {
         printSquare(square)
 
+        if(square.isEmpty()) return false
+
         val possibleNumbers = mutableMapOf<Int, Boolean>()
         resetPossibleNumbers(possibleNumbers, square.size)
         println(possibleNumbers)
 
         // rows
         for (i in square.indices) {
+            if(square[i].isEmpty()) return false
             for(j in square.indices) {
                 val isNumberExist = possibleNumbers.get(square[i][j])
                 if(isNumberExist != null && !isNumberExist) {
