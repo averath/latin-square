@@ -32,7 +32,7 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass.set("latin.square.AppKt")
+    mainClass.set("latin.square.LatinSquareKt")
 }
 
 tasks.named<Test>("test") {

@@ -52,6 +52,7 @@ class LatinSquare {
     }
 }
 
-fun main() {
-    println(LatinSquare().isLatinSquare(arrayOf(intArrayOf(1, 2))))
+fun main(args: Array<String>) {
+    val square = args.map { it.split(",").map { it2 -> it2.toInt() }.toIntArray() }.toTypedArray()
+    println(LatinSquare().isLatinSquare(square))
 }
