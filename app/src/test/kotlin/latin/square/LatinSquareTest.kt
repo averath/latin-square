@@ -15,7 +15,7 @@ class LatinSquareTest {
     fun smallLatinSquare_shouldReturnTrue() {
         val square: Array<IntArray> = arrayOf(intArrayOf(1, 2), intArrayOf(2, 1))
 
-        val result = classUnderTest.isValidLatinSquare(square)
+        val result = classUnderTest.isLatinSquare(square)
 
         assertTrue(result)
     }
@@ -24,7 +24,7 @@ class LatinSquareTest {
     fun smallLatinSquare_shouldReturnTrue2() {
         val square: Array<IntArray> = arrayOf(intArrayOf(1, 2, 3), intArrayOf(3, 1, 2), intArrayOf(2, 3, 1))
 
-        val result = classUnderTest.isValidLatinSquare(square)
+        val result = classUnderTest.isLatinSquare(square)
 
         assertTrue(result)
     }
@@ -33,7 +33,7 @@ class LatinSquareTest {
     fun smallSquare_shouldReturnFalse() {
         val square: Array<IntArray> = arrayOf(intArrayOf(1, 2), intArrayOf(1, 2))
 
-        val result = classUnderTest.isValidLatinSquare(square)
+        val result = classUnderTest.isLatinSquare(square)
 
         assertFalse(result)
     }
@@ -42,7 +42,7 @@ class LatinSquareTest {
     fun smallSquare_shouldReturnFalse2() {
         val square: Array<IntArray> = arrayOf(intArrayOf(1, 2, 3), intArrayOf(2, 1, 3), intArrayOf(3, 2, 1))
 
-        val result = classUnderTest.isValidLatinSquare(square)
+        val result = classUnderTest.isLatinSquare(square)
 
         assertFalse(result)
     }
@@ -51,7 +51,7 @@ class LatinSquareTest {
     fun duplicatedInts_shouldReturnFalse() {
         val square: Array<IntArray> = arrayOf(intArrayOf(2, 2), intArrayOf(1, 1))
 
-        val result = classUnderTest.isValidLatinSquare(square)
+        val result = classUnderTest.isLatinSquare(square)
 
         assertFalse(result)
     }
@@ -60,7 +60,7 @@ class LatinSquareTest {
     fun tooBigInts_shouldReturnFalse() {
         val square: Array<IntArray> = arrayOf(intArrayOf(1, 3), intArrayOf(2, 1))
 
-        val result = classUnderTest.isValidLatinSquare(square)
+        val result = classUnderTest.isLatinSquare(square)
 
         assertFalse(result)
     }
@@ -69,7 +69,7 @@ class LatinSquareTest {
     fun tooSmallInts_shouldReturnFalse() {
         val square: Array<IntArray> = arrayOf(intArrayOf(0, 1), intArrayOf(1, 0))
 
-        val result = classUnderTest.isValidLatinSquare(square)
+        val result = classUnderTest.isLatinSquare(square)
 
         assertFalse(result)
     }
@@ -78,7 +78,7 @@ class LatinSquareTest {
     fun notSquare_shouldReturnFalse() {
         val square: Array<IntArray> = arrayOf(intArrayOf(1,2))
 
-        val result = classUnderTest.isValidLatinSquare(square)
+        val result = classUnderTest.isLatinSquare(square)
 
         assertFalse(result)
     }
@@ -87,7 +87,7 @@ class LatinSquareTest {
     fun empty_shouldReturnFalse() {
         val square: Array<IntArray> = arrayOf(intArrayOf())
 
-        val result = classUnderTest.isValidLatinSquare(square)
+        val result = classUnderTest.isLatinSquare(square)
 
         assertFalse(result)
     }
@@ -96,7 +96,7 @@ class LatinSquareTest {
     fun empty2_shouldReturnFalse() {
         val square: Array<IntArray> = arrayOf()
 
-        val result = classUnderTest.isValidLatinSquare(square)
+        val result = classUnderTest.isLatinSquare(square)
 
         assertFalse(result)
     }
@@ -105,7 +105,7 @@ class LatinSquareTest {
     fun oneElement_shouldReturnTrue() {
         val square: Array<IntArray> = arrayOf(intArrayOf(1))
 
-        val result = classUnderTest.isValidLatinSquare(square)
+        val result = classUnderTest.isLatinSquare(square)
 
         assertTrue(result)
     }
