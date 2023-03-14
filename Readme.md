@@ -11,3 +11,7 @@ Run gradle command with arguments. Example:
 
 ## How to test
 Simply run: `gradle test`
+
+## Project structure
+* App files are located in [here](app/src/main/kotlin/latin/square/LatinSquare.kt)
+* Tests files are located in [here](app/src/test/kotlin/latin/square/LatinSquareTest.kt)
