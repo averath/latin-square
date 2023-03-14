@@ -6,7 +6,45 @@ package latin.square
 class LatinSquare {
     fun isValidLatinSquare(square: Array<IntArray>): Boolean {
         printSquare(square)
-        return false
+
+        val possibleNumbers = mutableMapOf<Int, Boolean>()
+        resetPossibleNumbers(possibleNumbers, square.size)
+        println(possibleNumbers)
+
+        // rows
+        for (i in square.indices) {
+            for(j in square.indices) {
+                val isNumberExist = possibleNumbers.get(square[i][j])
+                if(isNumberExist != null && !isNumberExist) {
+                    possibleNumbers[square[i][j]] = true
+                } else {
+                    return false
+                }
+            }
+            // reset possible numbers
+            resetPossibleNumbers(possibleNumbers, square.size)
+        }
+
+        // columns
+        for (i in square.indices) {
+            for(j in square.indices) {
+                val isNumberExist = possibleNumbers.get(square[j][i])
+                if(isNumberExist != null && !isNumberExist) {
+                    possibleNumbers[square[j][i]] = true
+                } else {
+                    return false
+                }
+            }
+            // reset possible numbers
+            resetPossibleNumbers(possibleNumbers, square.size)
+        }
+        return true
+    }
+
+    private fun resetPossibleNumbers(map: MutableMap<Int, Boolean>,size: Int) {
+        for (i in 1..size) {
+            map[i] = false
+        }
     }
 
     private fun printSquare(square: Array<IntArray>) {

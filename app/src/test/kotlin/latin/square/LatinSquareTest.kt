@@ -7,7 +7,7 @@ import kotlin.test.Test
 import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
-class AppTest {
+class LatinSquareTest {
 
     private val classUnderTest = LatinSquare()
 
